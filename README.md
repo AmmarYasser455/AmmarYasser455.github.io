@@ -22,7 +22,9 @@ To add a project, add its data, then add its marker and short label in src/Proje
 Use Node 24. In PowerShell run npm.cmd ci, then npm.cmd run dev.
 Open the localhost address; do not open index.html directly.
 Before publishing, run npm.cmd run build and node scripts/check-chess.mjs.
-Commit and push changes to main. GitHub Actions builds and deploys to GitHub Pages; check the Actions tab for progress.
+Commit and push source changes to main, then run npm.cmd run deploy. This builds locally and publishes the gh-pages branch using your existing GitHub sign-in. Standard GitHub Pages serves that branch. Check the Actions tab for the Pages deployment.
+
+The custom build workflow is manual-only while account billing blocks custom GitHub Actions. After resolving billing, it can be re-enabled for automatic builds and Pages switched to workflow mode.
 Do not add a CNAME unless intentionally switching domains.
 
 ## Maintenance
