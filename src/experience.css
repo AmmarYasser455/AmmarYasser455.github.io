@@ -1,0 +1,39 @@
+/* Three reference views: hero portrait, About portrait, seated work scene. */
+@media(min-width:1025px){
+ .avatar-stage{left:0;top:0;width:100%;height:100svh;max-height:none}
+ .character-canvas{mask-image:none}
+ .landing-intro{left:3%;width:24%}
+ .landing-info{left:75%;width:26%}
+ .header ul{column-gap:clamp(20px,2.4vw,45px);font-size:13px}
+ .navbar-connect{left:44%}
+ .about-section{min-height:105svh}
+ .about-me{width:47%;padding-right:3%}
+}
+.experience-section{position:relative;min-height:115svh;padding:110px 8%;max-width:1920px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.experience-heading{align-self:start;position:relative;z-index:3;pointer-events:none}
+.experience-heading h2{font-size:clamp(32px,3.3vw,60px);font-weight:500;letter-spacing:-.045em;line-height:1.1;margin:20px 0}.experience-heading h2 span{color:var(--accentColor)}
+.experience-content{position:relative;z-index:3;display:grid;gap:22px;max-width:620px;margin-left:auto}
+.experience-card{padding:30px;border:1px solid #c2a4ff30;border-radius:12px;background:#100c15ed;box-shadow:0 20px 60px #0002}
+.experience-date{font-size:11px;letter-spacing:1.6px;color:#c2a4ff;margin:0 0 15px}.experience-card h3{font-weight:500;font-size:clamp(22px,1.7vw,30px);line-height:1.2;margin:0 0 10px;letter-spacing:-.025em}.experience-company{font-size:13px;color:#c9b9d8;margin:0 0 20px}.experience-card ul{padding-left:18px;margin:0}.experience-card li,.experience-card>p:last-child:not(.experience-company){font-size:14px;line-height:1.8;color:#c4b9cf}.experience-card li{padding-left:4px;margin:0 0 10px}.experience-card li::marker{color:#b28cdd}.experience-card li:last-child{margin-bottom:0}.experience-mobile-scene{display:none}
+@media(min-width:1025px){.motion-off .experience-mobile-scene{display:block;height:530px;grid-column:1;grid-row:1;align-self:end}.motion-off .experience-heading{grid-column:1;grid-row:1;align-self:start}.motion-off .experience-content{grid-column:2;grid-row:1}.motion-off .about-me{width:70%}}
+@media(max-width:1024px){.experience-section{display:flex;flex-direction:column;align-items:stretch;padding:80px 9%;gap:24px;min-height:0}.experience-heading h2{font-size:42px}.experience-content{max-width:none;margin:0}.experience-mobile-scene{display:block;height:470px}.experience-mobile-scene .character-canvas{mask-image:none}.header ul{column-gap:20px;font-size:11px}.avatar-stage{height:430px}}
+@media(max-width:600px){.experience-section{padding:65px 22px}.experience-heading h2{font-size:35px}.experience-mobile-scene{height:340px}.experience-card{padding:23px}.experience-card h3{font-size:23px}.header ul{font-size:9px;column-gap:12px}.header ul a{letter-spacing:0}.avatar-stage{height:330px}.social-rail{top:730px}.about-section{padding-top:110px}}
+@media(prefers-reduced-motion:reduce){.avatar-stage{position:absolute}.experience-mobile-scene{display:block}.experience-card{box-shadow:none}}
+
+/* Topographic outlines replace the solid rounded card shells. */
+.experience-content{gap:24px}
+.experience-card{position:relative;isolation:isolate;padding:44px 48px;border:0;border-radius:0;box-shadow:none;background:transparent}
+.experience-card:before{content:'';position:absolute;inset:12px;z-index:-1;background:#0b080cf5;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.experience-contours{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:-1;fill:none;stroke:#9a83b1;stroke-width:.7;opacity:.3}
+.experience-contours path{vector-effect:non-scaling-stroke}
+.experience-contours path:nth-child(2){opacity:.65;stroke-dasharray:3 5}
+.experience-contours path:nth-child(3){opacity:.35}
+.experience-card h3{font-size:clamp(25px,2.1vw,36px);font-weight:750;line-height:1.1;text-transform:uppercase;letter-spacing:-.02em;color:#eae5ec;margin:0 0 12px}
+.experience-company{font-size:14px;font-weight:500;letter-spacing:.3px;color:#8c8592;margin-bottom:22px}
+.experience-date{font-size:10px;letter-spacing:1.7px;color:#b9a4d4;margin-bottom:18px}
+.experience-card li,.experience-card>p:last-child:not(.experience-company){font-size:14px;line-height:1.65;color:#c5becb}
+.experience-card li::marker{color:#9582a8}
+.experience-card:hover .experience-contours{opacity:.5}
+.experience-contours{transition:opacity .3s}
+@media(max-width:600px){.experience-card{padding:34px 28px}.experience-card h3{font-size:24px}.experience-company{font-size:13px}.experience-card li,.experience-card>p:last-child:not(.experience-company){font-size:13px}}
+@media(prefers-reduced-motion:reduce){.experience-contours{transition:none}}

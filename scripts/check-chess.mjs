@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {Chess} from 'chess.js';
+import {chooseMove} from '../src/chessEngine.ts';
+const game=new Chess();game.move('e4');const before=game.fen();
+const reply=chooseMove(before,2);assert.ok(reply);assert.doesNotThrow(()=>game.move(reply));assert.equal(game.turn(),'w');
+const mate=new Chess('7k/5Q2/6K1/8/8/8/8/8 w - - 0 1');mate.move(chooseMove(mate.fen(),2));assert.ok(mate.isCheckmate(),'engine finds mate in one');
+assert.equal(chooseMove(mate.fen(),2),null);
+const promotion=new Chess('7k/P7/8/8/8/8/8/7K w - - 0 1');promotion.move({from:'a7',to:'a8',promotion:'n'});assert.equal(promotion.get('a8').type,'n');
+const castle=new Chess('r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1');castle.move('O-O');assert.equal(castle.get('f1').type,'r');
+const ep=new Chess();['e4','a6','e5','d5','exd6'].forEach(m=>ep.move(m));assert.equal(ep.get('d5'),undefined);
+const repetition=new Chess();['Nf3','Nf6','Ng1','Ng8','Nf3','Nf6','Ng1','Ng8'].forEach(m=>repetition.move(m));assert.ok(repetition.isThreefoldRepetition());
+console.log('Chess checks passed: legal reply, mate, terminal position, underpromotion, castling, en passant and repetition.');
