@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import '@fontsource-variable/geist/latin.css';
+import './font.css';
 import './styles.css';
 import './projects.css';
 import './experience.css';
