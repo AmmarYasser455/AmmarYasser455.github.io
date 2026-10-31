@@ -15,4 +15,4 @@ My GIS developer portfolio, built with React, TypeScript and Vite. Features an i
 - Chess profile: `src/ChessPage.tsx`
 - Styling: `src/additions.css`
 
-Reference credits: [license](public/reference-LICENSE.txt) and [adaptation notes](docs/reference-adaptation.md).
+
