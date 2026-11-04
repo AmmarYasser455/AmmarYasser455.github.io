@@ -35,15 +35,9 @@
 .tech-tile svg{transition:color .2s,filter .2s,transform .2s}
 .tech-tile:hover,.tech-tile:focus-visible{background:#241731e8;border-color:#c2a4ff;transform:translateY(-5px);outline:none}
 .tech-tile:hover svg,.tech-tile:focus-visible svg{color:var(--tech-color,#c2a4ff);filter:drop-shadow(0 0 8px color-mix(in srgb,var(--tech-color) 35%,transparent));transform:scale(1.1)}
-.social-rail{isolation:isolate}
-.social-rail:before{content:'';position:absolute;inset:-12px -9px;border-radius:40px;background:#dfbaff;box-shadow:0 0 24px #c384ed80;z-index:-1;opacity:0;transform:scale(.94);transition:opacity .2s,transform .2s}
-.social-rail:hover:before,.social-rail:focus-within:before{opacity:1;transform:scale(1)}
-.social-rail:hover a,.social-rail:focus-within a{color:#100918}
-.social-rail a{transition:color .2s,transform .2s}
-.social-rail a:hover,.social-rail a:focus-visible{transform:scale(1.12)}
 @media(max-width:700px){.tech-moon{inset:10% -40% 10%;opacity:.4}.tech-tile{background:#160f21d9}}
-@media(prefers-reduced-motion:reduce){.tech-tile,.tech-tile svg,.social-rail a,.social-rail:before{transition:none;transform:none!important}}
-.motion-off .tech-tile,.motion-off .tech-tile svg,.motion-off .social-rail a,.motion-off .social-rail:before{transition:none;transform:none!important}
+@media(prefers-reduced-motion:reduce){.tech-tile,.tech-tile svg{transition:none;transform:none!important}}
+.motion-off .tech-tile,.motion-off .tech-tile svg{transition:none;transform:none!important}
 
 .work-page{padding-top:24px}.work-page>.chess-back{margin-bottom:24px}
 .work-page .atlas-heading{margin-bottom:20px}.work-page .atlas-heading h2{font-size:clamp(28px,3vw,44px);margin:8px 0}

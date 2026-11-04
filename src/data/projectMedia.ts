@@ -9,5 +9,5 @@ export const projectGalleries:Record<string,ProjectMedia[]> = {
  {src:'/images/projects/ovc-buildings.jpg',alt:'OVC building quality-control results map',caption:'Building quality-control results'},
  {src:'/images/projects/ovc-roads.jpg',alt:'OVC road quality-control results map',caption:'Road quality-control results'}
  ],
- 'ovc-arcgis-pro':[projectCovers['ovc-arcgis-pro']]
+ 'ovc-arcgis-pro':[projectCovers['ovc-arcgis-pro'],{src:'/images/projects/arcgis-road-conflict.png',alt:'ArcGIS Pro Building-Road Conflict Checker with conflicting building edges highlighted in yellow',caption:'Building-road conflicts in ArcGIS Pro'}]
 };

@@ -1,6 +1,5 @@
 @import './reference/base.css';
 @import './reference/styles/Loading.css';
-@import './atlas.css';
 @import './character.css';
 
 h1,h2,h3,h4,h5,h6{font-family:'Geist Variable',sans-serif!important}
